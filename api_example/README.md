@@ -14,7 +14,6 @@ api_reader.py - Python-скрипт для загрузки интересных
 
 ### Установка зависимостей
 
-```bash
 pip install requests tqdm pandas
 
 ### Использование скрипта
