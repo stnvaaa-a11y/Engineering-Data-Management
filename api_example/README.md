@@ -20,8 +20,10 @@ pip install requests tqdm pandas
 
 1. Скачайте скрипт api_reader.py
 2. Запустите скрипт:
-  python api_reader.py
-3. Результат: Скрипт создаст папку data/ и сохранит файл cat_facts.csv с загруженными фактами о кошках.
+
+python api_reader.py
+
+4. Результат: Скрипт создаст папку data/ и сохранит файл cat_facts.csv с загруженными фактами о кошках.
 
 Вы можете изменить количество загружаемых фактов, отредактировав строку в функции main():
 cat_facts = load_cat_facts_data(FACTS_API_URL, 20)  # Измените 20 на нужное число
