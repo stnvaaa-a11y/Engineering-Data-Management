@@ -8,7 +8,7 @@ OUTPUT_FILENAME = "data/cat_facts.csv"
 
 
 def load_cat_facts_data(facts_api_url: str, num_of_items: int = 10) -> list[dict]:
-    # Загружаем факты о котиках"
+    # Загружаем факты о котиках
 
     items = []
 
@@ -69,12 +69,11 @@ def convert_to_df_and_save(
 
 
 def main():
-    # Основная функция для загрузки и обработки фактов о котиках
-
+    
     print("🐱 Хотите узнать больше о котиках? 🐱")
     print("Источник данных: https://catfact.ninja/")
 
-    # Загружаем факты о котиках
+    # Загружаем факты
     cat_facts = load_cat_facts_data(FACTS_API_URL, 20)
 
     if not cat_facts:
@@ -104,3 +103,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
