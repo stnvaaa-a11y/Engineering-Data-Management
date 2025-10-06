@@ -37,9 +37,7 @@ def load_cat_facts_data(facts_api_url: str, num_of_items: int = 10) -> list[dict
                 items.append(fact_data)
 
             else:
-                print(
-                    f"\nВнимание! Код факта #{item_number + 1} - {response.status_code}"
-                )
+                print(f"\nВнимание! Код факта #{item_number + 1} - {response.status_code}")
 
         except Exception as e:
             print(f"\nОшибка! Проблемы с загрузкой факта #{item_number + 1}: {e}")
@@ -103,4 +101,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
