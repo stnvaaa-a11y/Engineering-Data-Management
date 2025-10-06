@@ -21,7 +21,7 @@ pip install requests tqdm pandas
 1. Скачайте скрипт api_reader.py
 2. Запустите скрипт:
 
-python api_reader.py
+  python api_reader.py
 
 4. Результат: Скрипт создаст папку data/ и сохранит файл cat_facts.csv с загруженными фактами о кошках.
 
