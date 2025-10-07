@@ -11,6 +11,7 @@ Python-скрипт, который достает со страницы https:/
 
 1. Python 3.8+
 2. Библиотеки:
+
   pip install requests beautifulsoup4 pandas tqdm lxml
 
 ### Запуск
