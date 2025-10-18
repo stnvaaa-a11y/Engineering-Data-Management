@@ -7,15 +7,12 @@ from sqlalchemy import create_engine, text
 PATH = Path(r"C:\Users\stnva\proj1\ironalloys.parquet")
 
 # Сначала удалим из датасета все специальные символы и пробелы
-
 bad_chars = re.compile(r"[^A-Za-z0-9_]+")
 
 
 def clean_string(text: str | None) -> str | None:
-
     # Пробелы заменим на «_».
     # Всё, что не латиница/цифры/«_» удалим
-
     if text is None:
         return text
     text = text.replace(" ", "_")
@@ -31,7 +28,6 @@ df.columns = [clean_string(col) for col in df.columns]
 for col in df.select_dtypes(include="object").columns:
     df[col] = df[col].astype(str).map(clean_string)
 
-
 print("Колонки после очистки:")
 print(list(df.columns))
 
@@ -41,18 +37,16 @@ print(df[first_col].tolist())
 
 # Сохраним чистый датасет
 df.to_parquet(PATH.with_stem(PATH.stem + "_cleaned"))
+
 db_creds_path = "C:/Users/stnva/proj1/creds.db"
 
 # Посмотрим содержимое creds.db
 with sqlite3.connect(db_creds_path) as conn:
     cursor = conn.cursor()
-
     cursor.execute("SELECT * FROM access LIMIT 1;")
     row_values = cursor.fetchone()
     col_names = [desc[0] for desc in cursor.description]
-
     creds = dict(zip(col_names, row_values))
-print(creds)
 
 # Запишем учетные данные
 url = creds.get("url")
@@ -63,7 +57,6 @@ password = creds.get("pass")
 # Подключаемся к БД homeworks
 conn_homeworks = f"postgresql+psycopg2://{user}:{password}@{url}:{port}/homeworks"
 engine = create_engine(conn_homeworks, echo=False, future=True)
-
 print("Подключились к homeworks")
 
 # Загрузим датасет
@@ -72,9 +65,12 @@ df = pd.read_parquet(PATH_clean).head(100)
 
 # Запишем датасет в БД
 df.to_sql(
-    name="ustinova", con=engine, schema="public", if_exists="replace", index=False
+    name="ustinova",
+    con=engine,
+    schema="public",
+    if_exists="replace",
+    index=False,
 )
-
 print("Таблица public.ustinova создана и заполнена")
 
 # Проверим, что натворили
@@ -83,10 +79,12 @@ with engine.connect() as conn:
     # Посмотрим таблицы
     tables = conn.execute(
         text(
-            "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';"
+            "SELECT table_name FROM information_schema.tables "
+            "WHERE table_schema = 'public';"
         )
     ).fetchall()
     print("Таблицы", [t[0] for t in tables])
+
     # Посмотрим первые 5 строк
     result = conn.execute(text("SELECT * FROM public.ustinova LIMIT 5;"))
     rows = result.fetchall()
