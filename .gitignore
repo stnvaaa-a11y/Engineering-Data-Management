@@ -1,0 +1,62 @@
+﻿# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+.tox/
+.nox/
+
+# Packaging/build
+build/
+dist/
+wheelhouse/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+MANIFEST
+
+# Test/coverage/lint caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.dmypy.json
+.ruff_cache/
+
+# Jupyter auxiliary
+.ipynb_checkpoints/
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Secrets and environment files
+.env
+*.env
+!*.env.example
+etl/.env
+
+# Project data artifacts
+data/**
+!data/.gitkeep
