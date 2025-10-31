@@ -22,24 +22,24 @@
         [Kaggle](https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset)
 ### Структура проекта
 Engineering-Data-Management/
-├── etl/                                # ETL-пайплайн (extract → transform → load) 
-│   ├── init.py 
+├── etl/                                # ETL-пайплайн (extract → transform → load)
+│   ├── init.py
 │   ├── main.py                         # Объединяет все этапы (extract -> transform -> load)
-│   ├── extract.py                      # Загрузка CSV (Google Drive FILE_ID) 
+│   ├── extract.py                      # Загрузка CSV (Google Drive FILE_ID)
 │   ├── transform.py                    # Очистка данных, приведение типов, сохранение в parquet
-│   └── load.py                         # Загрузка в PostgreSQL 
-│   
-├── docs/ # GitHub Pages 
-│   └── interactive_chromium.html       # Интерактивный график (Plotly) 
-├── notebooks/                          # Jupyter-ноутбуки (исследования) 
-│     └── EDA.ipynb                     # Первичный анализ данных 
-├── .gitignore 
+│   └── load.py                         # Загрузка в PostgreSQL
+│
+├── docs/                               # GitHub Pages
+│   └── interactive_chromium.html       # Интерактивный график (Plotly)
+├── notebooks/                          # Jupyter-ноутбуки (исследования)
+│   └── EDA.ipynb                       # Первичный анализ данных
+├── .gitignore
 ├── requirements.txt                    # Зависимости проекта
-├── README.md 
+├── README.md
 └── experiments/                        # Сопутствующие исследования
-    ├── api_example/                    # Пример использования api (рандомные факты о котиках)
-    │   ├── api_reader.py               # Получение и сохранение данных из Api
+    ├── api_example/                    # Пример использования API (рандомные факты о котиках)
+    │   ├── api_reader.py               # Получение и сохранение данных из API
     │   └── README.md
     └── parse_example/                  # Парсинг данных с сайта продажи школьных рюкзаков
-         ├── data_parser.py             # Парсинг и сохранение в csv
-         └── README.md
+        ├── data_parser.py              # Парсинг и сохранение в CSV
+        └── README.md
