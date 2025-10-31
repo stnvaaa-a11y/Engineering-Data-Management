@@ -23,7 +23,7 @@
 ### Структура проекта
 Engineering-Data-Management/
 ├── etl/                                # ETL-пайплайн (extract → transform → load)
-│   ├── init.py
+│   ├── __init__.py
 │   ├── main.py                         # Объединяет все этапы (extract -> transform -> load)
 │   ├── extract.py                      # Загрузка CSV (Google Drive FILE_ID)
 │   ├── transform.py                    # Очистка данных, приведение типов, сохранение в parquet
