@@ -1,5 +1,5 @@
 # О проекте
-Этот проект посвящен анализу, обработке и аналитике данных, содержащих информацию о составе и физических свойствах различных желехны сплавов.
+Этот проект посвящен анализу, обработке и аналитике данных, содержащих информацию о составе и физических свойствах различных железных сплавов.
 ### Задачи проекта
 1. Поиск и формирование исходного датасета
     - Загрузка исходного набора данных (CSV) с Google Drive по FILE_ID
@@ -16,10 +16,10 @@
     - Создание простого парсера
     - Пример использования Api
 ### Датасет
-Датасет посвящен физическим свойствам сплавов на основе железа и расположен по ссылке:
-[Doodle Drive](https://drive.google.com/drive/folders/1RMOLvTF27d-mAMkZQmKJ_ajW_TtetIsZ?usp=sharing)
-Источник данных:
-[Kaggle](https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset)
+    Датасет посвящен физическим свойствам сплавов на основе железа и расположен по ссылке:
+        [Doodle Drive](https://drive.google.com/drive/folders/1RMOLvTF27d-mAMkZQmKJ_ajW_TtetIsZ?usp=sharing)
+    Источник данных:
+        [Kaggle](https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset)
 ### Структура проекта
 Engineering-Data-Management/
 ├── etl/ # ETL-пайплайн (extract → transform → load) 
