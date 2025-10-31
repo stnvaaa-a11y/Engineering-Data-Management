@@ -12,11 +12,14 @@
   - Анализ полноты данных и основных корелляций
   - Использование статической (seaborn) и динамической (plotly express) визуализации
 5. Загрузка результата в PostgreSQL
+6. Сопутствующие исследовнаия
+  - Создание простого парсера
+  - Пример использования Api
 ### Датасет
 Датасет посвящен физическим свойствам сплавов на основе железа и расположен по ссылке:
-https://drive.google.com/drive/folders/1RMOLvTF27d-mAMkZQmKJ_ajW_TtetIsZ?usp=sharing
+[Doodle Drive](https://drive.google.com/drive/folders/1RMOLvTF27d-mAMkZQmKJ_ajW_TtetIsZ?usp=sharing)
 Источник данных:
-https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset
+[Kaggle](https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset)
 ### Структура проекта
 Engineering-Data-Management/
 ├── etl/ # ETL-пайплайн (extract → transform → load) 
