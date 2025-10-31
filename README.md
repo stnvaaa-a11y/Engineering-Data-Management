@@ -9,7 +9,7 @@
     - удаление спецсимволов
     - сохранение в parquet
 4. Исследование и визуализация данных (EDA)
-    - Анализ полноты данных и основных корелляций
+    - Анализ полноты данных, выбросов и основных корелляций
     - Использование статической (seaborn) и динамической (plotly express) визуализации
 5. Загрузка результата в PostgreSQL
 6. Сопутствующие исследовнаия
@@ -52,3 +52,19 @@ Engineering-Data-Management/
 3. Установите зависимости:<br>```pip install -r requirements.txt```
 4. Настройка окружения (.env)<br>Создайте файл .env со следующими переменными:<br>DB_HOST=<br>DB_PORT=<br>DB_USER=<br>DB_PASSWORD=<br>DB_NAME=<br>DB_SCHEMA=<br>DB_TABLE=
 5. Запуск ETL<br>```python -m etl.main```<br>После запуска будет запрошен Google Drive ID
+
+### Функционал ETL
+1. Extract:
+   - Автоматические скачивание датасета с Google Drive
+   - Сохранение данных в csv
+3. Transform:
+   - Удаление единиц измерения из ячеек и добавление их в название соответствующих стобцов
+   - Приведение типов
+   - Удаление спецсимволов
+   - Сохранение данных в parquet
+4. Load:
+   - Сохранение 100 первых строк в PostgreSQL
+### EDA
+```EDA.ipynb``` содержит анализ полноты, выбросов и корреляций данных. Исследование сопровокждается визуализацией (статической и динамической).<br> <a href="https://stnvaaa-a11y.github.io/Engineering-Data-Management/interactive_chromium.html">Динамическая визуализация</a>
+### Сопутствующие исследования
+<a href="https://github.com/stnvaaa-a11y/Engineering-Data-Management/tree/main/experiments/api_example">Api</a><br><a href="https://github.com/stnvaaa-a11y/Engineering-Data-Management/tree/main/experiments/parse_example">Parser</a>
