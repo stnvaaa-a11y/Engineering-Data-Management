@@ -21,6 +21,7 @@
     Источник данных:
         [Kaggle](https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset)
 ### Структура проекта
+  <pre>
 Engineering-Data-Management/
 ├── etl/                                # ETL-пайплайн (extract → transform → load)
 │   ├── __init__.py
@@ -43,3 +44,5 @@ Engineering-Data-Management/
     └── parse_example/                  # Парсинг данных с сайта продажи школьных рюкзаков
         ├── data_parser.py              # Парсинг и сохранение в CSV
         └── README.md
+  </pre>
+</details>
