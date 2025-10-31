@@ -18,4 +18,25 @@ https://drive.google.com/drive/folders/1RMOLvTF27d-mAMkZQmKJ_ajW_TtetIsZ?usp=sha
 Источник данных:
 https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset
 ### Структура проекта
-Engineering-Data-Management/ ├── etl/ # ETL-пайплайн (extract → transform → load) │ ├── __init__.py │ ├── extract.py # Загрузка CSV (Google Drive FILE_ID) │ ├── transform.py # Очистка данных и приведение типов │ ├── load.py # Загрузка в PostgreSQL │   ├── docs/ # GitHub Pages │ └── interactive_chromium.html # Интерактивный график (Plotly) ├── notebooks/ # Jupyter-ноутбуки (исследования) │ └── EDA.ipynb # Первичный анализ данных ├── .gitignore ├── requirements.txt # Зависимости проекта (pip) ├── README.md 
+Engineering-Data-Management/
+├── etl/ # ETL-пайплайн (extract → transform → load) 
+│   ├── init.py 
+│   ├── main.py # Объединяет все этапы (extract -> transform -> load)
+│   ├── extract.py # Загрузка CSV (Google Drive FILE_ID) 
+│   ├── transform.py # Очистка данных, приведение типов, сохранение в parquet
+│   └── load.py # Загрузка в PostgreSQL 
+│   
+├── docs/ # GitHub Pages 
+│   └── interactive_chromium.html # Интерактивный график (Plotly) 
+├── notebooks/ # Jupyter-ноутбуки (исследования) 
+│     └── EDA.ipynb # Первичный анализ данных 
+├── .gitignore 
+├── requirements.txt # Зависимости проекта
+├── README.md 
+└── experiments/ # Сопутствующие исследования
+    ├── api_example/ # Пример использования api (рандомные факты о котиках)
+    │   ├── api_reader.py # Получение и сохранение данных из Api
+    │   └── README.md
+    └── parse_example/ # Парсинг данных с сайта продажи школьных рюкзаков
+         ├── data_parser.py # Парсинг и сохранение в csv
+         └── README.md
