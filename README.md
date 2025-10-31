@@ -16,10 +16,7 @@
     - Создание простого парсера
     - Пример использования Api
 ### Датасет
-    Датасет посвящен физическим свойствам сплавов на основе железа и расположен по ссылке:
-        [Doodle Drive](https://drive.google.com/drive/folders/1RMOLvTF27d-mAMkZQmKJ_ajW_TtetIsZ?usp=sharing)
-    Источник данных:
-        [Kaggle](https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset)
+Датасет посвящен физическим свойствам сплавов на основе железа и расположен по ссылке:<br> <a href="https://drive.google.com/drive/folders/1RMOLvTF27d-mAMkZQmKJ_ajW_TtetIsZ?usp=sharing">Doodle Drive</a> <br>Источник данных:<br> <a href="https://www.kaggle.com/datasets/nikitamanaenkov/iron-alloys-dataset">Kaggle</a>
 ### Структура проекта
   <pre>
 Engineering-Data-Management/
@@ -46,3 +43,12 @@ Engineering-Data-Management/
         └── README.md
   </pre>
 </details>
+
+### Установка и использование
+1. Клонируйте репозиторий:<br> ```git clone https://github.com/stnvaaa-a11y/Engineering-Data-Management.git```<br>
+```cd Engineering-Data-Management```
+2. Создайте и активируйте переменное окружение:<br> ```conda create -n myenv python=3.13 pip```<br>
+```conda activate myenv```
+3. Установите зависимости:<br>```pip install -r requirements.txt```
+4. Настройка окружения (.env)<br>Создайте файл .env со следующими переменными:<br>DB_HOST=<br>DB_PORT=<br>DB_USER=<br>DB_PASSWORD=<br>DB_NAME=<br>DB_SCHEMA=<br>DB_TABLE=
+5. Запуск ETL<br>```python -m etl.main```<br>После запуска будет запрошен Google Drive ID
